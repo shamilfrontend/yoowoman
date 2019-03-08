@@ -1,0 +1,217 @@
+// default mixin
+
+.module-title() {
+  font-size: 24px;
+  //text-align: center;
+  margin-bottom: 15px;
+}
+
+.module-detail() {
+  padding-bottom: 15px;
+  border-bottom: 1px dotted #dddddd;
+  margin-bottom: 30px;
+}
+
+
+// Модуль кто красивее
+.module-who-beautiful {
+  .clr();
+  position: relative;
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border-bottom: 1px dotted #dddddd;
+  margin-bottom: 30px;
+  .module-who-beautiful__prev {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    width: 32px;
+    height: 61px;
+    margin-top: -35px;
+    background-image: url("../img/sprite_v1.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+  .module-who-beautiful__next {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    width: 32px;
+    height: 70px;
+    margin-top: -35px;
+    background-image: url("../img/sprite_v1.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: -33px 0;
+  }
+  .module-who-beautiful__title {
+    .module-title();
+  }
+  .module-who-beautiful__vs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -20px;
+    width: 50px;
+    height: 40px;
+    font-size: 40px;
+    font-style: italic;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+  }
+  .module-who-beautiful__left {
+    float: left;
+    width: 250px;
+    text-align: center;
+    img {
+      border: 10px solid #eeeeee;
+      display: inline-block;
+      margin-bottom: 10px;
+      border-radius: 20px;
+    }
+  }
+  .module-who-beautiful__right {
+    float: right;
+    width: 250px;
+    text-align: center;
+    img {
+      border: 10px solid #eeeeee;
+      display: inline-block;
+      margin-bottom: 10px;
+      border-radius: 20px;
+    }
+  }
+  .module-who-beautiful__name {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+  .module-who-beautiful__count-vote {
+    margin-bottom: 10px;
+    color: @user1-color;
+    p {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  .module-who-beautiful__count-vote--2 {
+    color: @user2-color;
+  }
+  .module-who-beautiful__vote1 {
+    .btn-user1();
+  }
+  .module-who-beautiful__vote2 {
+    .btn-user2();
+  }
+  .module-who-beautiful__all {
+    clear: both;
+    padding-top: 20px;
+    text-align: center;
+    a {
+      text-align: center;
+      .btnRun();
+      padding: 5px 30px;
+      border-radius: 6px;
+    }
+  }
+}
+
+// Модуль поделиться секретом
+.module-add-secret {
+  .module-detail();
+  .module-add-secret__title {
+    .module-title();
+  }
+  .module-add-secret__name {
+    .form-shadow();
+    width: 200px;
+    height: 36px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  .module-add-secret__mail {
+    .form-shadow();
+    width: 200px;
+    height: 36px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+  textarea {
+    .form-shadow();
+    display: block;
+    width: 100%;
+    height: 100px;
+    max-height: 150px;
+    resize: vertical;
+    margin-bottom: 15px;
+    line-height: 1.42857143;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+  }
+  .module-add-secret__btngroup {
+    margin-bottom: 20px;
+    button {
+      .btnRun();
+      padding: 2px 30px;
+      margin-right: 10px;
+    }
+    input {
+      display: none;
+      vertical-align: middle;
+      &:checked + label:after {
+        background-image: url('../img/checked.png');
+        border-color: #ed2e2f;
+      }
+    }
+    label {
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 30px;
+      position: relative;
+      line-height: 20px;
+      cursor: pointer;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        background-color: #eeeeee;
+        box-sizing: border-box;
+        border: 1px solid #000;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}
+
+.module-last-secret {
+  .module-detail();
+  .module-last-secret__title {
+    .module-title();
+  }
+  .module-last-secret__all {
+    clear: both;
+    padding-top: 20px;
+    text-align: center;
+    a {
+      text-align: center;
+      .btnRun();
+      padding: 5px 30px;
+      border-radius: 6px;
+    }
+  }
+
+}

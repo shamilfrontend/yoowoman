@@ -1,0 +1,147 @@
+// гостева книга
+.guestbook{
+    .guestbook__descr {
+        margin-bottom: 10px;
+    }
+}
+
+.guestbook-add{
+    font-size: 0;
+    margin-bottom: 30px;
+    .guestbook-add__descr{
+        color: #000;
+        margin-bottom: 100px;
+        overflow: hidden;
+    }
+    .guestbook-add__input {
+        .form-shadow();
+        width: 200px;
+        height: 36px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+    textarea{
+        .sideInput(99%, 80px);
+        resize: none;
+        font-size: 16px;
+        display: block;
+        margin-bottom: 10px;
+    }
+    button{
+        .btnRun(#CE2427, 35px);
+        box-shadow: none;
+        margin-right: 15px;
+        &:active{
+            margin-top: 0;
+        }
+    }
+    #guestbook-add {
+        display: none;
+        vertical-align: middle;
+        &:checked + label:after {
+            background-image: url('../img/checked.png');
+            border-color: #ed2e2f;
+        }
+    }
+    label {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 30px;
+        position: relative;
+        line-height: 20px;
+        cursor: pointer;
+        font-size: 16px;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #eeeeee;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.guestbook-list{
+    .guestbook-item{
+        margin-bottom: 30px;
+    }
+}
+
+.guestbook-list .guestbook-item--admin {
+    background-color: @accent-color;
+    .guestbook-box__info {
+        color: #ffffff;
+    }
+    .guestbook-box__username {
+        color: #ffffff;
+    }
+    .guestbook-box__mag {
+        color: #fff;
+    }
+}
+
+.guestbook-box{
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+    padding-right: 15px;
+    .guestbook-box__photo{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 2px 0 10px 0 rgba(0,0,0,0.5);
+        float: left;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .guestbook-box__brack{
+        height: 101px;
+        width: 25px;
+        background: url(../img/commentBracket.png) no-repeat;
+        position: absolute;
+        left: 125px;
+        z-index: 1;
+        @media (max-width: 640px) {
+            display: none;
+        }
+    }
+    .guestbook-box__msgcont{
+        margin-left: 180px;
+        border-bottom: 1px dashed #3c3c3a;
+        padding-bottom: 20px;
+        min-height: 100px;
+        color: #000;
+        @media (max-width: 640px) {
+            margin-left: 120px;
+        }
+    }
+    .guestbook-box__info{
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    .guestbook-box__username{
+        color: @accent-color;
+        font-weight: bold;
+        float: left;
+    }
+    .guestbook-box__dateadd{
+        color: @accent-color;
+        float: right;
+        @media (max-width: 640px) {
+            display: none;
+        }
+    }
+    .guestbook-box__mag{
+        line-height: 30px;
+    }
+}

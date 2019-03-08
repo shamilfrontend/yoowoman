@@ -1,0 +1,33 @@
+*{
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 10px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 98%;
+  }
+}
+
+.clearfix:before, .clearfix:after,
+.container:before, .container:after,
+.row:before, .row:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after,
+.container:after,
+.row:after {
+  clear: both;
+}
